@@ -1,7 +1,5 @@
 $(function() {
 
-  modal();
-
   var galleryThumbs = new Swiper('.gallery-thumbs', {
     spaceBetween: 10,
     slidesPerView: 5,
@@ -45,18 +43,3 @@ $(function() {
   } 
 
 })
-
-function modal() {
-  var modal = $("#myModal");
-
-  $(window).on("click", function(e) {
-      if (e.target.id == modal.attr("id")) {
-          modal.fadeOut(200);
-      }
-  })
-
-  $(".video-gallery .video a.intro-link").click(function(e) {
-      e.preventDefault();
-      modal.css("display","block");
-  })
-}

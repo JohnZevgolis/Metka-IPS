@@ -942,7 +942,7 @@ body.certifications {
 	padding: 0 10px;
 }
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1024px) {
 	.search-section form div[class^=col-]:first-child,
 	.search-section form div[class^=col-]:nth-child(2) {
 		margin-bottom: 20px;
@@ -1010,6 +1010,73 @@ body.certifications {
 	font-size: 26px;
 	color: #3f3f3f;
 }
+
+@media only screen and (max-width: 1400px) {
+	.project-box h5 {
+		font-size: 16px;
+	}
+
+	.project-box h4 {
+		font-size: 22px;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.project-box h5 {
+		font-size: 15px;
+	}
+
+	.project-box h4 {
+		font-size: 20px;
+	}
+
+	.project-box .box-content span {
+		font-size: .8rem;
+	}
+
+	.project-box a.plus-btn.black.slim {
+		font-size: 13px;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.project-box h5 {
+		font-size: 18px;
+	}
+
+	.project-box h4 {
+		font-size: 26px;
+	}
+
+	.project-box .box-content span {
+		font-size: .9rem;
+	}
+
+	.project-box a.plus-btn.black.slim {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.project-box h5 {
+		font-size: 16px;
+	}
+
+	.project-box h4 {
+		font-size: 22px;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.project-box h5 {
+		font-size: 18px;
+	}
+
+	.project-box h4 {
+		font-size: 26px;
+	}
+}
+
 
 .project-box span {
     color: #a4a4a4;
@@ -1441,33 +1508,6 @@ body.certifications {
 	margin-bottom: 0;
 }
 
-
-.modal {
-    display: none; 
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.5);
-    z-index: 100000; 
-}
-
-.modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    width: 50%; 
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-}
-
 .resp-container {
     position: relative;
     overflow: hidden;
@@ -1483,53 +1523,13 @@ body.certifications {
     border: 0;
 }
 
-@media only screen and (max-width: 1200px) {
-	.modal-content {
-		width: 70%;
-	}
-}
-
-@media only screen and (max-width: 767px) {
-	.modal-content {
-		width: 80%;
-	}
-}
-
-@media only screen and (max-width: 576px) {
-	.modal-content {
-		width: 90%;
-	}
-}
-
-.modal-header {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-}
-
-.modal-body {padding: 2px 16px;}
-
-.modal-footer {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-}
-
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 50%; opacity: 1}
-}
-
-@-webkit-keyframes animatetop {
-	from {top: -300px; opacity: 0}
-    to {top: 50%; opacity: 1}
-}
-
-.video-slider div[class^="col"] {
+.video-slider div[class^="col"],
+.news-slider div[class^="col"] {
 	box-sizing: border-box;
 }
 
-.video-pagination {
+.video-pagination,
+.news-pagination {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1538,7 +1538,8 @@ body.certifications {
 	        justify-content: center;
 }
 
-.video-pagination span {
+.video-pagination span,
+.news-pagination span {
 	background-color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1558,9 +1559,14 @@ body.certifications {
     opacity: 1;
 }
 
-.video-pagination span.swiper-pagination-bullet-active {
+.video-pagination span.swiper-pagination-bullet-active,
+.news-pagination span.swiper-pagination-bullet-active {
 	color: #fff;
 	background: #436882;
+}
+
+.video-gallery .intro-link figure {
+	padding-top: 0;
 }
 
 /***    Events Calendar    ***/
@@ -1611,7 +1617,8 @@ body.certifications {
 	}
 }
 
-.my-events-calendar ul.pagination {
+.my-events-calendar ul.pagination,
+ul.news-pagination {
 	list-style: none;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1622,7 +1629,8 @@ body.certifications {
 	padding: 0;
 }
 
-.my-events-calendar ul.pagination li a {
+.my-events-calendar ul.pagination li a,
+ul.news-pagination li a {
 	background-color: #fff;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1640,7 +1648,8 @@ body.certifications {
 	color: #436882;
 }
 
-.my-events-calendar ul.pagination li a.active {
+.my-events-calendar ul.pagination li a.active,
+ul.news-pagination li a.active {
 	background-color: #436882;
 	color: #fff;
 }
@@ -2095,4 +2104,93 @@ span.project-location {
 		-ms-transform: translateX(-50%);
 		right: auto;
 	}
+}
+
+/***    All News     ***/
+
+.my-page-info-news p {
+	margin-bottom: 0;
+}
+
+.search-section-news {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+
+	.search-section-news form div[class^=col-]:first-child, .search-section form div[class^=col-]:last-child {
+		margin-bottom: 0;
+	}
+
+}
+
+@media only screen and (max-width: 640px) {
+
+	.search-section-news form div[class^=col-]:first-child {
+		margin-bottom: 20px;
+	}
+
+}
+
+.news-all-section {
+	padding-top: 2rem;
+}
+
+.news-all-section .news-all-new {
+	margin-bottom: 1rem;
+}
+
+.news-all-section .news-all-new .new-content {
+	padding: 1rem 0;
+}
+
+.news-all-section .news-all-new .new-content h5 {
+	font-size: 14px;
+	color: #807f7f;
+	font-weight: 300;
+	margin-bottom: 0;
+}
+
+.news-all-section .news-all-new .new-content h4 {
+	font-size: 24px;
+	color: #436882;
+	word-spacing: -7px;
+} 
+
+.news-all-section .news-all-new .new-content p {
+	font-size: 14px;
+	margin-bottom: 1rem;
+}
+
+.news-all-section .news-all-new .new-content a:before {
+	display: none;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.news-all-section .news-all-new .new-content h4 {
+		font-size: 20px;
+	} 
+
+	.news-all-section .news-all-new .new-content p,
+	.news-all-section .news-all-new .new-content a,
+	.news-all-section .news-all-new .new-content h5 {
+		font-size: 12px;
+	}
+
+}
+
+@media only screen and (max-width: 640px) {
+
+	.news-all-section .news-all-new .new-content h4 {
+		font-size: 24px;
+	} 
+
+	.news-all-section .news-all-new .new-content p,
+	.news-all-section .news-all-new .new-content a,
+	.news-all-section .news-all-new .new-content h5 {
+		font-size: 14px;
+	}
+
 }
