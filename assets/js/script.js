@@ -49,10 +49,19 @@ function validateForm() {
 	var validate;
 
 	$(".cv-form input[type='file']").change(function() {
-		if($(this).val() != "") {
-			$(".cv-form input[type='file']").parent().children("span").remove();
+
+		$(this).parent().children("span").remove();
+		var fileExtension = ['doc', 'docx', 'pdf'];
+		var f = this.files[0];
+
+		if($(this).val() != "" && $.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+			 $(this).parent().append("<span class='file-error'>Επιτρεπόμενες μορφές: doc, docx, pdf</span>");
+		} else if($(this).val() != "" && f.size>2000000) {
+			$(this).parent().append("<span class='file-error'>Μέγιστο επιτρεπόμενο μέγεθος: 2ΜΒ</span>");
+		} else if($(this).val() == "") {
+			$(this).parent().append("<span class='file-error'>Δεν επιλέχθηκε κανένα αρχείο.</span>");
 		}
-	})
+	}) 
 
 	$(".cv-form button[type='submit']").click(function(e) {
 		e.preventDefault();
@@ -84,10 +93,22 @@ function validateForm() {
 		})
 
 		$(".cv-form input[file-required='true']").each(function() {
-			if($(this).val() == "") {
-				$(this).parent().children("span").remove();
-				$(this).parent().append("<span class='no-file'>Δεν επιλέχθηκε κανένα αρχείο.</span>");
+
+			$(this).parent().children("span").remove();
+			var fileExtension = ['doc', 'docx', 'pdf'];			
+			var f = this.files[0];
+
+			if($(this).val() == "") {	
+				$(this).parent().append("<span class='file-error'>Δεν επιλέχθηκε κανένα αρχείο.</span>");
 				animateForm();
+				fileRequired = false;
+			} else if($(this).val() != "" && f.size>2000000) {
+				$(this).parent().append("<span class='file-error'>Μέγιστο επιτρεπόμενο μέγεθος: 2ΜΒ</span>");
+				animateForm();
+				fileRequired = false;
+			} else if($(this).val() != "" && $.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+			 	$(this).parent().append("<span class='file-error'>Επιτρεπόμενες μορφές: docm docx, pdf</span>");
+			 	animateForm();
 				fileRequired = false;
 			} else {
 				fileRequired = true;

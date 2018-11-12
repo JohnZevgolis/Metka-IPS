@@ -391,6 +391,11 @@ a.table-btn:before {
 	        align-items: center;
 }
 
+.flex-wrap {
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
 .opacity-0 {
 	opacity: 0;
 }
@@ -2303,19 +2308,22 @@ ul.news-pagination li a.active {
     text-align: center;
     padding: 0.5rem 1.5rem;
     font-weight: 400;
-    cursor: pointer;
     margin-left: 7rem;
 }
 
+.labelfile {
+	margin-right: 1rem;
+}
+
 .labelfile span,
-span.no-file {
+span.file-error {
 	color: #434648;
 	font-size: 16px;
 	text-transform: none;
 }
 
-span.no-file {
-	margin-left: 1rem;
+.file-error {
+	padding: 10px 0;
 }
 
 .cv-form .education-level label,
