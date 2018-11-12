@@ -1,7 +1,10 @@
 $(function() {
+
 	SetUpGridCols();
 	SetUpGridCols2();
 	availableModels();
+	validateForm();
+	file();
 
 	$(window).resize(function() {
 		availableModels();
@@ -29,6 +32,73 @@ $(function() {
 	})
 
 })
+
+function animateForm() {
+	var headerHeight = $("header").height();
+	$("html,body").animate({scrollTop: $(".personal-data-heading").offset().top - (headerHeight+30)},500);
+}
+
+function validateEmail($email) {
+  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+  return emailReg.test( $email );
+}
+
+function validateForm() {
+	var formSubmit;
+	var fileRequired;
+	var validate;
+
+	$(".cv-form input[type='file']").change(function() {
+		if($(this).val() != "") {
+			$(".cv-form input[type='file']").parent().children("span").remove();
+		}
+	})
+
+	$(".cv-form button[type='submit']").click(function(e) {
+		e.preventDefault();
+
+		$(".cv-form input[data-required='true']").each(function() {
+			if($(this).val() == "") {
+				$(this).addClass("error");
+				$(this).prev("label").addClass("error");			
+				animateForm();
+				formSubmit = false;
+			} else {
+				$(this).removeClass("error");
+				$(this).prev("label").removeClass("error");	
+				formSubmit = true;
+			}
+		})
+
+		$(".cv-form input[email-required='true']").each(function() {
+			if($(this).val() == "" || !validateEmail($(this).val())) {
+				$(this).addClass("error");
+				$(this).prev("label").addClass("error");
+				animateForm();
+				validate = false;
+			} else {
+				$(this).removeClass("error");
+				$(this).prev("label").removeClass("error");	
+				validate = true;
+			}
+		})
+
+		$(".cv-form input[file-required='true']").each(function() {
+			if($(this).val() == "") {
+				$(this).parent().children("span").remove();
+				$(this).parent().append("<span class='no-file'>Δεν επιλέχθηκε κανένα αρχείο.</span>");
+				animateForm();
+				fileRequired = false;
+			} else {
+				fileRequired = true;
+			}
+		})
+
+		if(formSubmit == true && fileRequired == true && validate == true) {
+			$(".cv-form").submit();
+		}
+	})
+}
 
 function SetUpGridCols() {
     $('.grid_col').matchHeight
@@ -87,3 +157,26 @@ function getScrollbarWidth() {
 
     return widthNoScroll - widthWithScroll;
 }
+
+function file() {
+	var inputs = document.querySelectorAll( '#cv' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+	    var label    = document.getElementById("labelfile"),
+	        labelVal = label.innerHTML;
+
+	    input.addEventListener( 'change', function( e )
+	    {
+	        var fileName = '';
+	        if( this.files && this.files.length > 1 )
+	            fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+	        else
+	            fileName = e.target.value.split( '\\' ).pop();
+
+	        if( fileName )
+	            label.querySelector( 'span' ).innerHTML = fileName;
+	        else
+	            label.innerHTML = labelVal;
+	    });
+	});
+}   

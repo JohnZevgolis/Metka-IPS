@@ -1,16 +1,12 @@
 $(function() {
 
-	var projectInfo = new Swiper('.project-info', {
-        loop: true,
-        simulateTouch:false
-    });
-    var projectBg = new Swiper('.project-bg', {
-        loop: true,
-        simulateTouch:false
-    });
     var projectBg2 = new Swiper('.project-bg2', {
         loop: true,
-        simulateTouch:false
+        simulateTouch:false,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false
+        },
     });
     var projectSlider = new Swiper('.project-img', {
         loop: true,
@@ -18,23 +14,15 @@ $(function() {
             delay: 6000,
             disableOnInteraction: false
         },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-        },
-        nested: true,
     });
 
     $(".project-controls .btn-next").click(function() {
-    	projectInfo.slideNext();
-    	projectBg.slideNext();
+    	projectSlider.slideNext();
     	projectBg2.slideNext();
     })
 
     $(".project-controls .btn-prev").click(function() {
-    	projectInfo.slidePrev();
-    	projectBg.slidePrev();
+    	projectSlider.slidePrev();
     	projectBg2.slidePrev();
     })
 	

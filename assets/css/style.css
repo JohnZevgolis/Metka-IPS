@@ -449,6 +449,18 @@ a.plus-btn:hover:before {
 	}
 }
 
+.disclaimer-box.white-box-with-bg .box.animate[data-animation],
+.new-box.white-box-with-bg .box.animate[data-animation] {
+	left: 25%;
+}
+
+@media only screen and (max-width: 1026px) {
+	.disclaimer-box.white-box-with-bg .box.animate[data-animation],
+	.new-box.white-box-with-bg .box.animate[data-animation] {
+		left: 0;
+	}
+}
+
 /***     Header    ***/
 
 header .social [class*=facebook]:hover,
@@ -1591,12 +1603,6 @@ body.certifications {
     opacity: 1;
 }
 
-.video-pagination span.swiper-pagination-bullet-active,
-.news-pagination span.swiper-pagination-bullet-active {
-	color: #fff;
-	background: #436882;
-}
-
 .video-gallery .intro-link figure {
 	padding-top: 0;
 }
@@ -1673,8 +1679,6 @@ span.project-location {
     margin-bottom: 1.5rem;
 }
 
-.project-bg.swiper-container,
-.project-bg.swiper-container .swiper-wrapper,
 .project-bg2.swiper-container,
 .project-bg2.swiper-container .swiper-wrapper,
 .project-img.swiper-container,
@@ -1682,8 +1686,6 @@ span.project-location {
 	position: absolute;
 }
 
-.project-bg.swiper-container,
-.project-bg.swiper-container .swiper-wrapper,
 .project-img.swiper-container,
 .project-img.swiper-container .swiper-wrapper {
 	top: 0;
@@ -1696,7 +1698,6 @@ span.project-location {
 	right: 0;
 }
 
-.project-bg.swiper-container,
 .project-bg2.swiper-container,
 .project-img.swiper-container {
 	padding-bottom: 66.6%;
@@ -1806,17 +1807,19 @@ span.project-location {
 	background: none;
 }
 
-.project-info div[class^="col"] {
-	box-sizing: border-box;
-}
-
 .project-info {
 	margin-top: -60px;
+	position: relative;
+	z-index: 1;
 }
 
-.project-info .swiper-wrapper {
+.project-info .project-info-container {
 	width: 95%;
 	margin: 0 auto;
+}
+
+.project-info .project-info-container .row > div:last-child {
+	margin-top: 60px !important;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1824,11 +1827,11 @@ span.project-location {
 		margin-top: 60%;
 	}
 
-	.project-info .swiper-slide .row > div:last-child {
+	.project-info .project-info-container .row > div:last-child {
 		margin-top: 0 !important;
 	}
 
-	.project-info .swiper-wrapper {
+	.project-info .project-info-container {
 		width: 100%;
 	}
 }
@@ -1957,56 +1960,7 @@ span.project-location {
 	.project-controls:after {
 		border-color: #fff;
 	}
-}
-
-.project-img .swiper-pagination {
-	bottom: 80px;
-	left: 50%;
-	transform: translateX(-50%);
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	width: 95%;
-	text-align: left;
-}
-
-.project-img .swiper-pagination-bullet {
-	width: 12px;
-    height: 12px;
-    display: inline-block;
-    border-radius: 100%;
-    background: #fff;
-    opacity: .5;
-    cursor: pointer;
-    margin: 0 8px;
-}
-
- .project-img .swiper-pagination-bullet-active {
-    opacity: 1;
-}   
-
-@media only screen and (max-width: 991px) {
-	.project-img .swiper-pagination {
-		bottom: 60px;
-	}
-}
-
-@media only screen and (max-width: 767px) {
-	.project-img .swiper-pagination {
-		bottom: 50px;
-	}
-}
-
-@media only screen and (max-width: 576px) {
-	.project-img .swiper-pagination {
-		bottom: 40px;
-	}
-}
-
-@media only screen and (max-width: 420px) {
-	.project-img .swiper-pagination {
-		bottom: 30px;
-	}
-}
+} 
 
 /***    Industrial    ***/
 
@@ -2232,6 +2186,21 @@ ul.news-pagination li a.active {
 
 .cv-form label {
 	display: block;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+.cv-form label:before {
+	-moz-transition: max-width .3s ease,margin .3s ease;
+    -webkit-transition: max-width .3s ease,margin .3s ease;
+    background: #ebccd1;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    margin: 4px 0;
+    max-width: 0;
+    transition: max-width .3s ease,margin .3s ease;
+    width: 100%;
 }
 
 .cv-form input,
@@ -2338,6 +2307,17 @@ ul.news-pagination li a.active {
     margin-left: 7rem;
 }
 
+.labelfile span,
+span.no-file {
+	color: #434648;
+	font-size: 16px;
+	text-transform: none;
+}
+
+span.no-file {
+	margin-left: 1rem;
+}
+
 .cv-form .education-level label,
 .cv-form .education-level input[type="checkbox"],
 .cv-form .foreign-languages label,
@@ -2433,4 +2413,17 @@ input.checkbox:checked:after {
 	.cv-form button[type="submit"] {
 		margin-top: 1rem;
 	}
+}
+
+input.error {
+	border-bottom: 2px solid #ebccd1 !important;
+}
+
+label.error {
+	color: #a94442;
+}
+
+.cv-form label.error:before {
+	margin: 4px 5px;
+    max-width: 15px;
 }
