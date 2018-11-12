@@ -2435,3 +2435,7 @@ label.error {
 	margin: 4px 5px;
     max-width: 15px;
 }
+
+.g-recaptcha.error {
+	border: 2px solid #ebccd1 !important;;
+}

@@ -44,9 +44,7 @@ function validateEmail($email) {
 }
 
 function validateForm() {
-	var formSubmit;
-	var fileRequired;
-	var validate;
+	var formSubmit, fileRequired, validate, grecaptchaValidate;
 
 	$(".cv-form input[type='file']").change(function() {
 
@@ -115,7 +113,15 @@ function validateForm() {
 			}
 		})
 
-		if(formSubmit == true && fileRequired == true && validate == true) {
+		if(grecaptcha.getResponse() == "") {
+			$(".g-recaptcha").addClass("error");
+		    grecaptchaValidate = false;
+		} else {
+			$(".g-recaptcha").removeClass("error");
+			grecaptchaValidate = true;
+		} 
+
+		if(formSubmit == true && fileRequired == true && validate == true && grecaptchaValidate == true) {
 			$(".cv-form").submit();
 		}
 	})
