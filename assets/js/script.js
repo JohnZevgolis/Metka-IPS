@@ -105,7 +105,7 @@ function validateForm() {
 				animateForm();
 				fileRequired = false;
 			} else if($(this).val() != "" && $.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
-			 	$(this).parent().append("<span class='file-error'>Επιτρεπόμενες μορφές: docm docx, pdf</span>");
+			 	$(this).parent().append("<span class='file-error'>Επιτρεπόμενες μορφές: doc, docx, pdf</span>");
 			 	animateForm();
 				fileRequired = false;
 			} else {
