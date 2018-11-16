@@ -174,8 +174,7 @@ function validateForm() {
 
     $( "#edlevdatefrom" ).datepicker({
     	maxDate: "0",
-    	dateFormat: "dd/mm/yy",
-    	
+    	dateFormat: "dd/mm/yy", 	
     });
 
     $( "#edlevdateto").datepicker({
@@ -190,7 +189,6 @@ function validateForm() {
     $( "#edlevdatefrom1" ).datepicker({
     	maxDate: "0",
     	dateFormat: "dd/mm/yy",
-    	
     });
 
     $( "#edlevdateto1").datepicker({
@@ -205,7 +203,6 @@ function validateForm() {
     $( "#edlevdatefrom2" ).datepicker({
     	maxDate: "0",
     	dateFormat: "dd/mm/yy",
-    	
     });
 
     $( "#edlevdateto2").datepicker({
@@ -219,8 +216,7 @@ function validateForm() {
 
     $( "#masterdatefrom" ).datepicker({
     	maxDate: "0",
-    	dateFormat: "dd/mm/yy",
-    	
+    	dateFormat: "dd/mm/yy",	
     });
 
     $( "#masterdateto").datepicker({
@@ -234,8 +230,7 @@ function validateForm() {
 
     $( "#masterdatefrom1" ).datepicker({
     	maxDate: "0",
-    	dateFormat: "dd/mm/yy",
-    	
+    	dateFormat: "dd/mm/yy",	
     });
 
     $( "#masterdateto1").datepicker({
@@ -249,8 +244,7 @@ function validateForm() {
 
     $( "#jobdatefrom" ).datepicker({
     	maxDate: "0",
-    	dateFormat: "dd/mm/yy",
-    	
+    	dateFormat: "dd/mm/yy",	
     });
 
     $( "#jobdateto").datepicker({
@@ -264,8 +258,7 @@ function validateForm() {
 
     $( "#jobdatefrom1" ).datepicker({
     	maxDate: "0",
-    	dateFormat: "dd/mm/yy",
-    	
+    	dateFormat: "dd/mm/yy",	
     });
 
     $( "#jobdateto1").datepicker({
@@ -280,7 +273,6 @@ function validateForm() {
     $( "#jobdatefrom2" ).datepicker({
     	maxDate: "0",
     	dateFormat: "dd/mm/yy",
-    	
     });
 
     $( "#jobdateto2").datepicker({

@@ -1995,13 +1995,77 @@ span.project-location {
 .industrial-carousel a.plus-btn.slim {
 	text-transform: none;
 	font-weight: 300;
-	margin-bottom: .2rem;
+	margin-bottom: .5rem;
 	font-size: 20px;
 	display: block;
 }
 
+.industrial-carousel a.plus-btn.slim div {
+	border: 1px solid #406680;
+	display: inline-block;
+	border-radius: 100%;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+.industrial-carousel a.plus-btn.slim div i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	font-size: 14px;
+	z-index: 10;
+	display: block;
+	transition: -webkit-transform .35s ease-in;
+    transition: transform .35s ease-in;
+    transition: transform .35s ease-in, -webkit-transform .35s ease-in, -moz-transform .35s ease-in;
+    -moz-transition: transform .35s ease-in, -moz-transform .35s ease-in;
+    -webkit-transition: -webkit-transform .35s ease-in;
+}
+
 .industrial-carousel a.plus-btn.slim:before {
 	display: none;
+}
+
+.industrial-carousel a.plus-btn.slim div:after {
+    -moz-transform: scale(0);
+    -moz-transform-origin: center;
+    -moz-transition: transform .2s ease-in, -moz-transform .2s ease-in;
+    -ms-transform: scale(0);
+    -ms-transform-origin: center;
+    -webkit-transform: scale(0);
+    -webkit-transform-origin: center;
+    -webkit-transition: -webkit-transform .2s ease-in;
+    border-radius: 50%;
+    content: "";
+    height: 1.875rem;
+    left: -1px;
+    position: absolute;
+    top: -1px;
+    transform: scale(0);
+    transform-origin: center;
+    transition: -webkit-transform .2s ease-in;
+    transition: transform .2s ease-in;
+    transition: transform .2s ease-in, -webkit-transform .2s ease-in, -moz-transform .2s ease-in;
+    width: 1.875rem;
+    z-index: 1;
+    background: #406680;
+}
+
+.industrial-carousel a.plus-btn.slim:hover div:after {
+	-moz-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+}
+
+.industrial-carousel a.plus-btn.slim:hover i {
+	color: #fff;
 }
 
 .industrial-carousel .owl-dots {
@@ -2479,4 +2543,9 @@ label.error {
 	background: #436882;
 	color: #fff !important;
 	border: none;
+}
+
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
+	background: #fff;
 }
