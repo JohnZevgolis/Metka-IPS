@@ -84,13 +84,6 @@
 	text-transform: uppercase;
 }
 
-.social.share-pdf a:hover i,
-.social.share-pdf a:hover span {
-	-webkit-transition: all .35s;
-    -ms-transition: all .35s;
-    transition: all .35s;
-}
-
 .social.share-pdf ul > li > a:hover {
     background: #406680;
     border-color: #406680;
