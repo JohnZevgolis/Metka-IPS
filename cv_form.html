@@ -32,6 +32,8 @@
     <!--************** Fonts **************-->
 
     <!--************** StyleSheets **************-->
+    <link rel="styleshhet" href="assets/css/jquery-ui.min.css" />
+    <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <!--[if IE]> <link rel="stylesheet" href="assets/css/IE9.css" /><![endif]-->
@@ -204,7 +206,7 @@
                         &nbsp;
                         <p>If you are interested to work at ΜΕΤΚΑ IPS, you may use the CV submission form.</p>
 
-                        <form class="cv-form">
+                        <div class="cv-form">
                             <div class="row">
                                 <div class="col-xxs-12">
                                     <div class="d-flex">
@@ -348,15 +350,78 @@
                                             <input type="text" name="titledegree" id="titledegree">
                                         </div>
                                         <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
-                                            <label for="date">Date</label>
-                                            <input type="text" name="date" id="date">
+                                            <label for="edlevdatefrom">Date</label>
+                                            <input type="text" name="edlevdatefrom" id="edlevdatefrom">
                                         </div>
                                         <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
-                                            <label for="degreeuntil">Until</label>
-                                            <input type="text" name="degreeuntil" id="degreeuntil">
+                                            <label for="edlevdateto">Until</label>
+                                            <input type="text" name="edlevdateto" id="edlevdateto">
                                         </div>
                                         <div class="col-xxs-12 margin-bottom-1">
-                                            <button>Add <i class="fa fa-plus"></i></button>
+                                            <a href="#" id="ed-level-1-btn">Add <i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="row d-none" id="ed-level-1">
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="educationtype1">Education type</label>
+                                            <select name="educationtype1" id="educationtype1">
+                                                <option selected>Select</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="degreetype1">Degree type</label>
+                                            <select name="degreetype1" id="degreetype1">
+                                                <option selected>Select</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="studylocation1">Study location</label>
+                                            <input type="text" name="studylocation1" id="studylocation1">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="titledegree1">Title Degree</label>
+                                            <input type="text" name="titledegree1" id="titledegree1">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="edlevdatefrom1">Date</label>
+                                            <input type="text" name="edlevdatefrom1" id="edlevdatefrom1">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="edlevdateto1">Until</label>
+                                            <input type="text" name="edlevdateto1" id="edlevdateto1">
+                                        </div>
+                                        <div class="col-xxs-12 margin-bottom-1">
+                                            <a href="#" id="ed-level-2-btn">Add <i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="row d-none" id="ed-level-2">
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="educationtype2">Education type</label>
+                                            <select name="educationtype2" id="educationtype2">
+                                                <option selected>Select</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="degreetype2">Degree type</label>
+                                            <select name="degreetype2" id="degreetype2">
+                                                <option selected>Select</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="studylocation2">Study location</label>
+                                            <input type="text" name="studylocation2" id="studylocation2">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="titledegree2">Title Degree</label>
+                                            <input type="text" name="titledegree2" id="titledegree2">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="edlevdatefrom2">Date</label>
+                                            <input type="text" name="edlevdatefrom2" id="edlevdatefrom2">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="edlevdateto2">Until</label>
+                                            <input type="text" name="edlevdateto2" id="edlevdateto2">
                                         </div>
                                     </div>
                                 </div>
@@ -389,15 +454,45 @@
                                             <input type="text" name="mastertitle" id="mastertitle">
                                         </div>
                                         <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
-                                            <label for="date2">Date</label>
-                                            <input type="text" name="date2" id="date2">
+                                            <label for="masterdatefrom">Date</label>
+                                            <input type="text" name="masterdatefrom" id="masterdatefrom">
                                         </div>
                                         <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
-                                            <label for="masteruntil">Until</label>
-                                            <input type="text" name="masteruntil" id="masteruntil">
+                                            <label for="masterdateto">Until</label>
+                                            <input type="text" name="masterdateto" id="masterdateto">
                                         </div>
                                         <div class="col-xxs-12">
-                                            <button>Add <i class="fa fa-plus"></i></button>
+                                            <a href="#" id="master-1-btn">Add <i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="row d-none" id="master-1">
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="universitylocation1">University location</label>
+                                            <select name="universitylocation1" id="universitylocation1">
+                                                <option selected>Select</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="mastertype1">Master type</label>
+                                            <select name="mastertype1" id="mastertype1">
+                                                <option selected>Select</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="universitytitle1">University title</label>
+                                            <input type="text" name="universitytitle1" id="universitytitle1">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="mastertitle1">Master title</label>
+                                            <input type="text" name="mastertitle1" id="mastertitle1">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="masterdatefrom1">Date</label>
+                                            <input type="text" name="masterdatefrom1" id="masterdatefrom1">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="masterdateto1">Until</label>
+                                            <input type="text" name="masterdateto1" id="masterdateto1">
                                         </div>
                                     </div>
                                 </div>
@@ -500,7 +595,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row working-experience margin-bottom-1-5">
+                            <div class="row working-experience">
                                 <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
                                     <div>
                                         <input type="checkbox" class="checkbox" id="job" value="job">
@@ -510,12 +605,12 @@
                                 <div class="col-xxs-12 pl-45">
                                     <div class="row">
                                         <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
-                                            <label for="jobdate">Date</label>
-                                            <input type="text" name="jobdate" id="jobdate">
+                                            <label for="jobdatefrom">Date</label>
+                                            <input type="text" name="jobdatefrom" id="jobdatefrom">
                                         </div>
                                         <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
-                                            <label for="jobuntil">Until</label>
-                                            <input type="text" name="jobuntil" id="jobuntil">
+                                            <label for="jobdateto">Until</label>
+                                            <input type="text" name="jobdateto" id="jobdateto">
                                         </div>
                                         <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
                                             <label for="company">Company</label>
@@ -525,8 +620,67 @@
                                             <label for="positions">Positions</label>
                                             <input type="text" name="positions" id="positions">
                                         </div>
-                                        <div class="col-xxs-12">
-                                            <button>Add <i class="fa fa-plus"></i></button>
+                                        <div class="col-xxs-12 margin-bottom-1-5">
+                                            <a href="#" id="job-1-btn">Add <i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row working-experience d-none" id="job-1">
+                                <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                    <div>
+                                        <input type="checkbox" class="checkbox" id="job" value="job">
+                                        <label for="job" class="checkbox">Job</label>
+                                    </div>
+                                </div>
+                                <div class="col-xxs-12 pl-45">
+                                    <div class="row">
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="jobdatefrom1">Date</label>
+                                            <input type="text" name="jobdatefrom1" id="jobdatefrom1">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="jobdateto1">Until</label>
+                                            <input type="text" name="jobdateto1" id="jobdateto1">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="company">Company</label>
+                                            <input type="text" name="company" id="company">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="positions">Positions</label>
+                                            <input type="text" name="positions" id="positions">
+                                        </div>
+                                        <div class="col-xxs-12 margin-bottom-1-5">
+                                            <a href="#" id="job-2-btn">Add <i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row working-experience d-none" id="job-2">
+                                <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                    <div>
+                                        <input type="checkbox" class="checkbox" id="job" value="job">
+                                        <label for="job" class="checkbox">Job</label>
+                                    </div>
+                                </div>
+                                <div class="col-xxs-12 pl-45">
+                                    <div class="row">
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="jobdatefrom2">Date</label>
+                                            <input type="text" name="jobdatefrom2" id="jobdatefrom2" id="datepicker_from7">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="jobdateto2">Until</label>
+                                            <input type="text" name="jobdateto2" id="jobdateto2" id="datepicker_from8">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="company">Company</label>
+                                            <input type="text" name="company" id="company">
+                                        </div>
+                                        <div class="col-xxs-12 col-sm-6 col-md-12 col-lg-6 margin-bottom-1">
+                                            <label for="positions">Positions</label>
+                                            <input type="text" name="positions" id="positions">
                                         </div>
                                     </div>
                                 </div>
@@ -594,10 +748,10 @@
                                     </div>
                                 </div>
                                 <div class="col-xxs-12 col-sm-4 text-right">
-                                    <button type="submit"><i class="fas fa-angle-right"></i> Send</button>
+                                    <a class="cv-submit-btn"><i class="fas fa-angle-right"></i> Send</a>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
 
                 </div>
@@ -780,6 +934,7 @@
         <!--************** Scripts **************-->
         <!--[if lt IE 9]><script type="text/javascript" src="assets/js/legacy.js"></script><![endif]-->
         <!--<script type="text/javascript" src="/DEV/Debug/debug.js"></script>-->
+        <script src="assets/js/jquery-ui.min.js"></script>
         <script src="assets/js/jquery.matchHeight-min.js"></script>
         <script type="text/javascript" src="assets/js/bundle.js"></script>
 

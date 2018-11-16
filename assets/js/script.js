@@ -35,7 +35,7 @@ $(function() {
 
 function animateForm() {
 	var headerHeight = $("header").height();
-	$("html,body").animate({scrollTop: $(".personal-data-heading").offset().top - (headerHeight+30)},500);
+	$("html,body").stop().animate({scrollTop: $(".personal-data-heading").offset().top - (headerHeight+30)},500);
 }
 
 function validateEmail($email) {
@@ -61,7 +61,7 @@ function validateForm() {
 		}
 	}) 
 
-	$(".cv-form button[type='submit']").click(function(e) {
+	$(".cv-form a.cv-submit-btn").click(function(e) {
 		e.preventDefault();
 
 		$(".cv-form input[data-required='true']").each(function() {
@@ -125,6 +125,172 @@ function validateForm() {
 			$(".cv-form").submit();
 		}
 	})
+
+	$("#ed-level-1-btn").click(function(e) {
+
+		e.preventDefault();
+
+		$(this).parent().addClass("d-none");
+		$("#ed-level-1").removeClass("d-none");
+
+	})
+
+	$("#ed-level-2-btn").click(function(e) {
+
+		e.preventDefault();
+
+		$(this).parent().addClass("d-none");
+		$("#ed-level-2").removeClass("d-none");
+		
+	})
+
+	$("#master-1-btn").click(function(e) {
+
+		e.preventDefault();
+
+		$(this).parent().addClass("d-none");
+		$("#master-1").removeClass("d-none");
+		
+	})
+
+	$("#job-1-btn").click(function(e) {
+
+		e.preventDefault();
+
+		$(this).parent().addClass("d-none");
+		$("#job-1").removeClass("d-none");
+		
+	})
+
+	$("#job-2-btn").click(function(e) {
+
+		e.preventDefault();
+
+		$(this).parent().addClass("d-none");
+		$("#job-2").removeClass("d-none");
+		
+	})
+
+
+    $( "#edlevdatefrom" ).datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	
+    });
+
+    $( "#edlevdateto").datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	beforeShow: function (date) {
+            var date2 = $('#edlevdatefrom').datepicker('getDate');
+            $('#edlevdateto').datepicker('option', 'minDate', date2);
+        }
+    });
+
+    $( "#edlevdatefrom1" ).datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	
+    });
+
+    $( "#edlevdateto1").datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	beforeShow: function (date) {
+            var date2 = $('#edlevdatefrom1').datepicker('getDate');
+            $('#edlevdateto1').datepicker('option', 'minDate', date2);
+        }
+    });
+
+    $( "#edlevdatefrom2" ).datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	
+    });
+
+    $( "#edlevdateto2").datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	beforeShow: function (date) {
+            var date2 = $('#edlevdatefrom2').datepicker('getDate');
+            $('#edlevdateto2').datepicker('option', 'minDate', date2);
+        }
+    });
+
+    $( "#masterdatefrom" ).datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	
+    });
+
+    $( "#masterdateto").datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	beforeShow: function (date) {
+            var date2 = $('#masterdatefrom').datepicker('getDate');
+            $('#masterdateto').datepicker('option', 'minDate', date2);
+        }
+    });
+
+    $( "#masterdatefrom1" ).datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	
+    });
+
+    $( "#masterdateto1").datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	beforeShow: function (date) {
+            var date2 = $('#masterdatefrom1').datepicker('getDate');
+            $('#masterdateto1').datepicker('option', 'minDate', date2);
+        }
+    });
+
+    $( "#jobdatefrom" ).datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	
+    });
+
+    $( "#jobdateto").datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	beforeShow: function (date) {
+            var date2 = $('#jobdatefrom').datepicker('getDate');
+            $('#jobdateto').datepicker('option', 'minDate', date2);
+        }
+    });
+
+    $( "#jobdatefrom1" ).datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	
+    });
+
+    $( "#jobdateto1").datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	beforeShow: function (date) {
+            var date2 = $('#jobdatefrom1').datepicker('getDate');
+            $('#jobdateto1').datepicker('option', 'minDate', date2);
+        }
+    });
+
+    $( "#jobdatefrom2" ).datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	
+    });
+
+    $( "#jobdateto2").datepicker({
+    	maxDate: "0",
+    	dateFormat: "dd/mm/yy",
+    	beforeShow: function (date) {
+            var date2 = $('#jobdatefrom2').datepicker('getDate');
+            $('#jobdateto2').datepicker('option', 'minDate', date2);
+        }
+    });
 }
 
 function SetUpGridCols() {

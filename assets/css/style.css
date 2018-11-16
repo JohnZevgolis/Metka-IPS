@@ -2277,7 +2277,7 @@ ul.news-pagination li a.active {
 .cv-form .working-experience input:not([type="checkbox"]),
 .cv-form .working-experience select {
 	height: 2.2rem;
-	background-color: transparent;
+	background-color: #f6f6f6;
 	border-bottom: 1px solid #bebebe;
 	transition: all .3s;
 	-webkit-transition: all .3s;
@@ -2360,7 +2360,7 @@ input.checkbox:checked:after {
 	color: #406680;
 }
 
-.cv-form button {
+.cv-form a {
 	background-color: #436882;
 	border: none;
 	outline: none;
@@ -2372,7 +2372,7 @@ input.checkbox:checked:after {
 	cursor: pointer;
 }
 
-.cv-form button i {
+.cv-form a i {
 	display: inline-block;
 	vertical-align: middle;
 	font-size: 10px;
@@ -2380,12 +2380,13 @@ input.checkbox:checked:after {
 	margin-left: .5rem;
 }
 
-.cv-form button[type="submit"] {
+.cv-form a.cv-submit-btn {
 	text-transform: uppercase;
 	padding: 1rem 2rem 1rem 1.5rem;
+	display: inline-block;
 }
 
-.cv-form button[type="submit"] i {
+.cv-form a.cv-submit-btn i {
 	font-size: 16px;
 	margin-left: 0;
 	margin-right: 10px;
@@ -2397,7 +2398,7 @@ input.checkbox:checked:after {
     transition-timing-function: ease-out;
 }
 
-.cv-form button[type="submit"]:hover i {
+.cv-form a.cv-submit-btn:hover i {
 	transform: translateX(4px);
 	-webkit-transform: translateX(4px);
 	-ms-transform: translateX(4px);
@@ -2418,7 +2419,7 @@ input.checkbox:checked:after {
 }
 
 @media only screen and (max-width: 640px) {
-	.cv-form button[type="submit"] {
+	.cv-form a.cv-submit-btn {
 		margin-top: 1rem;
 	}
 }
@@ -2438,4 +2439,44 @@ label.error {
 
 .g-recaptcha.error {
 	border: 2px solid #ebccd1 !important;;
+}
+
+.ui-datepicker {
+	border: none;
+	padding: 0;
+}
+
+.ui-datepicker-title span {
+	font-family: Stag Sans, sans-serif, serif, Helvetica;
+}
+
+.ui-datepicker table {
+	margin: 0 0 1em;
+}
+
+.ui-datepicker .ui-datepicker-header {
+	background: #f6f6f6;
+    border: none;
+   	color: #353535;
+   	border: none;
+}
+
+.ui-datepicker .ui-datepicker-calendar,
+.ui-datepicker .ui-datepicker-calendar td a {
+	color: #353535;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+	background: #f6f6f6;
+	transition: none;
+	-webkit-transition: none;
+	-ms-transition: none;
+	border: none;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight,
+.ui-state-hover, .ui-widget-content .ui-state-hover  {
+	background: #436882;
+	color: #fff !important;
+	border: none;
 }
