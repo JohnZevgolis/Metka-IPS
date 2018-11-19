@@ -57,16 +57,16 @@ function modal() {
   $("body").click(function(e) {
       if (e.target.id == modal.attr('id') && modal.is(":visible")) {
         modalContent.stop().animate({"top":"-300px"},400,function() {
+          $(modal).find("iframe").removeAttr("src");
           modal.fadeOut(400);
-
         })
       }
   })
 
   span.click(function() {
     modalContent.stop().animate({"top":"-300px"},400,function() {
+      $(modal).find("iframe").removeAttr("src");
       modal.fadeOut(400);
-
     })
   })
 
@@ -76,7 +76,6 @@ function modal() {
     var iframe = $(this).attr("data-src");
 
     modalContent.removeAttr("style");
-    $(modal).find("iframe").attr("src","");
 
     modal.fadeIn(400,function() {
       $(modal).find("iframe").attr("src",iframe);
