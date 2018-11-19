@@ -270,6 +270,10 @@ a.table-btn:before {
 	margin-top: 5rem !important;
 }
 
+.margin-right-1 {
+	margin-right: 1rem !important
+}
+
 .mx-auto {
 	margin: 0 auto;
 }
@@ -477,6 +481,17 @@ header .social [class*=youtube]:hover:after {
 
 footer .bottom img {
 	padding-left: 0;
+}
+
+footer a.square-btn.white:after {
+	display: none;
+}
+
+footer .middle .square-btn {
+	transform: none;
+	-webkit-transform: none;
+	-ms-transform: none;
+	padding: 0;
 }
 
 
@@ -1605,6 +1620,105 @@ body.certifications {
 	padding-top: 0;
 }
 
+.video-gallery .intro-link figure img {
+	max-width: 100%;
+}
+
+#myModal {
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+#myModal .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    width: 50%;
+    -webkit-animation-name: animatetop;
+            animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+            animation-duration: 0.4s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+#myModal .close {
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+   	top: -15px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#myModal .close span {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	position: absolute;
+	line-height: 1;
+}
+
+#myModal .close:hover span {
+	opacity: .7;
+}
+
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 50%; opacity: 1}
+}
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 50%; opacity: 1}
+}
+
+@media only screen and (max-width: 1400px) {
+	#myModal .modal-content {
+		width: 70%;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	#myModal .modal-content {
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#myModal .modal-content {
+		width: 90%;
+	}
+
+	#myModal .modal-content {
+		padding: 10px;
+	}
+
+	#myModal .close {
+		font-size: 23px;
+	}
+}
+
 /***    Events Calendar    ***/
 
 .my-events-calendar {
@@ -2231,7 +2345,8 @@ ul.news-pagination li a {
 	color: #436882;
 }
 
-ul.news-pagination li a.active {
+ul.news-pagination li a.active,
+.video-pagination span.swiper-pagination-bullet-active {
 	background-color: #436882;
 	color: #fff;
 }
@@ -2541,4 +2656,27 @@ label.error {
 .ui-datepicker-prev:hover,
 .ui-datepicker-next:hover {
 	background: #fff;
+}
+
+/***     Ε-LIBRARY     ***/
+
+.e-library.certification .row > div:last-child {
+	padding: 2.5rem 0 4.6875rem 0;
+}
+
+.e-library .row > div:first-child img {
+	box-shadow: 2px 2px 2px #c6c8cd;
+}
+
+@media only screen and (max-width: 1024px) {
+	.e-library.certification .row > div:last-child {
+		text-align: center;
+		padding: 0;
+	}
+
+	.e-library.certification .row > div:last-child div.d-flex {
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
 }

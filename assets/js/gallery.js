@@ -1,5 +1,7 @@
 $(function() {
 
+  modal();
+
   var galleryThumbs = new Swiper('.gallery-thumbs', {
     spaceBetween: 10,
     slidesPerView: 5,
@@ -26,6 +28,7 @@ $(function() {
   })
 
   var videoSlider = new Swiper('.video-slider', {
+    simulateTouch:false,
     pagination: {
       el: $('.video-pagination'),// to find the swiper-pagination you put outside of the swiper-container
       clickable: true,
@@ -43,3 +46,41 @@ $(function() {
   } 
 
 })
+
+function modal() {
+
+  var modal = $("#myModal");
+  var modalContent = $("#myModal .modal-content");
+
+  var span = $("#myModal span");
+
+  $("body").click(function(e) {
+      if (e.target.id == modal.attr('id') && modal.is(":visible")) {
+        modalContent.stop().animate({"top":"-300px"},400,function() {
+          modal.fadeOut(400);
+
+        })
+      }
+  })
+
+  span.click(function() {
+    modalContent.stop().animate({"top":"-300px"},400,function() {
+      modal.fadeOut(400);
+
+    })
+  })
+
+  $(".video-gallery .video-slider a.intro-link").click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var iframe = $(this).attr("data-src");
+
+    modalContent.removeAttr("style");
+    $(modal).find("iframe").attr("src","");
+
+    modal.fadeIn(400,function() {
+      $(modal).find("iframe").attr("src",iframe);
+    });
+  })
+
+}
