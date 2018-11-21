@@ -2179,6 +2179,10 @@ span.project-location {
 	padding-top: 1rem;
 }
 
+.industrial-carousel .owl-stage {
+	margin: 0 auto;
+}
+
 /***   Cookies    ***/
 
 #cookies {
