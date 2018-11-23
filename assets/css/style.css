@@ -2183,6 +2183,68 @@ span.project-location {
 	margin: 0 auto;
 }
 
+#solutionsCarousel .item-top .bg span {
+    -moz-backface-visibility: hidden;
+    -moz-transform-style: preserve-3d;
+    -moz-transition: transform .4s cubic-bezier(.55, .085, .68, .53), -moz-transform .4s cubic-bezier(.55, .085, .68, .53);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform .4s cubic-bezier(.55, .085, .68, .53);
+    backface-visibility: hidden;
+    background: #fff;
+    display: block;
+    left: 5%;
+    position: absolute;
+    right: 5%;
+    top: 7%;
+    transform-style: preserve-3d;
+    transition: -webkit-transform .4s cubic-bezier(.55, .085, .68, .53);
+    transition: transform .4s cubic-bezier(.55, .085, .68, .53);
+    transition: transform .4s cubic-bezier(.55, .085, .68, .53), -webkit-transform .4s cubic-bezier(.55, .085, .68, .53), -moz-transform .4s cubic-bezier(.55, .085, .68, .53);
+}
+
+#solutionsCarousel .item-top .bg span:first-child {
+	-moz-transform: scaleX(0);
+    -moz-transform-origin: center;
+    -ms-transform: scaleX(0);
+    -ms-transform-origin: center;
+    -webkit-transform: scaleX(0);
+    -webkit-transform-origin: center;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 90%;
+}
+
+#solutionsCarousel .item-top .bg span:nth-child(2), #solutionsCarousel .item-top .bg span:nth-child(3) {
+    -moz-transform: scaleY(0);
+    -moz-transform-origin: bottom;
+    -ms-transform: scaleY(0);
+    -ms-transform-origin: bottom;
+    -webkit-transform: scaleY(0);
+    -webkit-transform-origin: bottom;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    width: 1px;
+}
+
+#solutionsCarousel .item-top .bg span:nth-child(3) {
+	left: auto;
+}
+
+#solutionsCarousel .solutions-item:hover .item-top .bg span,
+#solutionsCarousel .solutions-item:hover .bg {
+    -moz-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+} 
+
+#solutionsCarousel .solutions-item:hover .item-bottom {
+	background-color: #fff;
+}
+
 /***   Cookies    ***/
 
 #cookies {
