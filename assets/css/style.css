@@ -1746,6 +1746,44 @@ body.certifications {
 	        flex-direction: column;
 	padding-top: 6rem;
 	padding-bottom: 4rem;
+	backface-visibility: hidden;
+	position: relative;
+}
+
+.my-events-calendar .event-info:before, .my-events-calendar .event-info:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px rgb(119,119,119,.5);
+  -moz-box-shadow: 0 15px 10px rgb(119,119,119,.5);
+  box-shadow: 0 15px 10px rgb(119,119,119,.5);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  opacity: 0;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s;
+}
+
+.my-events-calendar .event-info:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
 }
 
 .my-events-calendar .event-info span {
@@ -1777,6 +1815,24 @@ body.certifications {
 	background-position: center center;
 	background-color: #fff;
 	background-size: contain;
+}
+
+.my-events-calendar > .container > .row> div.col-md-7 {
+	transition: all .6s;
+	-webkit-transition: all .6s;
+	-ms-transition: all .6s;
+}
+
+@media only screen and (min-width: 1024px) {
+	.my-events-calendar > .container > .row:hover > div.col-md-7 {
+		-webkit-transform: scale(1.07);
+		    -ms-transform: scale(1.07);
+		        transform: scale(1.07);
+	}
+
+	.my-events-calendar > .container > .row:hover .event-info:before, .my-events-calendar > .container > .row:hover .event-info:after {
+		opacity: 1;
+	}
 }
 
 /***    Project    ***/
