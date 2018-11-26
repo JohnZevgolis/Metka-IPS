@@ -2780,6 +2780,17 @@ label.error {
 	background: #fff;
 }
 
+select.ui-datepicker-month,
+select.ui-datepicker-year {
+	border: none;
+	margin: 1px 2px !important;
+}
+
+select.ui-datepicker-month:focus,
+select.ui-datepicker-year:focus {
+	outline: none;
+}
+
 /***     Ε-LIBRARY     ***/
 
 .e-library.certification .row > div:last-child {
