@@ -122,7 +122,9 @@ function validateForm() {
 		} 
 
 		if(formSubmit == true && fileRequired == true && validate == true && grecaptchaValidate == true) {
-			$(".cv-form").submit();
+			console.log("form submit");
+            SendCV();
+   			//$(".cv-form").submit();
 		}
 	})
 
@@ -171,18 +173,25 @@ function validateForm() {
 		
 	})
 
+	$("#birthday").datepicker({
+		changeMonth: true,
+    	changeYear: true,
+    	yearRange: "-100:+0",
+		maxDate: "0",
+    	dateFormat: "dd/mm/yy", 
+	});
 
-    $( "#edlevdatefrom" ).datepicker({
+    $( "#edlevdatefrom0" ).datepicker({
     	maxDate: "0",
     	dateFormat: "dd/mm/yy", 	
     });
 
-    $( "#edlevdateto").datepicker({
+    $( "#degreeuntil0").datepicker({
     	maxDate: "0",
     	dateFormat: "dd/mm/yy",
     	beforeShow: function (date) {
-            var date2 = $('#edlevdatefrom').datepicker('getDate');
-            $('#edlevdateto').datepicker('option', 'minDate', date2);
+            var date2 = $('#edlevdatefrom0').datepicker('getDate');
+            $('#degreeuntil0').datepicker('option', 'minDate', date2);
         }
     });
 
@@ -214,17 +223,17 @@ function validateForm() {
         }
     });
 
-    $( "#masterdatefrom" ).datepicker({
+    $( "#masterdatefrom0" ).datepicker({
     	maxDate: "0",
     	dateFormat: "dd/mm/yy",	
     });
 
-    $( "#masterdateto").datepicker({
+    $( "#masterdateuntil0").datepicker({
     	maxDate: "0",
     	dateFormat: "dd/mm/yy",
     	beforeShow: function (date) {
-            var date2 = $('#masterdatefrom').datepicker('getDate');
-            $('#masterdateto').datepicker('option', 'minDate', date2);
+            var date2 = $('#masterdatefrom0').datepicker('getDate');
+            $('#masterdateuntil0').datepicker('option', 'minDate', date2);
         }
     });
 
