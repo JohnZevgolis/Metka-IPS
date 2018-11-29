@@ -1413,6 +1413,59 @@ body.certifications {
 	padding-bottom: 66.6%;
 }
 
+.gallery-top .swiper-slide .swiperHeading {
+	position: absolute;
+	bottom: 20px;
+	left: 40px;
+	opacity: 0;
+	-o-transition: all .4s;
+	-webkit-transition: all .4s;
+	transition: all .4s;
+	-webkit-transition-delay: .3s;
+	     -o-transition-delay: .3s;
+	        transition-delay: .3s;
+	-webkit-transform: rotateX(90deg) translateX(20px);
+		-ms-transform: rotateX(90deg) translateX(20px);
+	        transform: rotateX(90deg) translateX(20px);
+	max-width: 60%;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.gallery-top .swiper-slide h2 {
+	color: #fff;
+	font-size: 2rem;
+}
+
+.gallery-top .swiper-slide-active .swiperHeading {
+	opacity: 1;
+	-webkit-transform: none;
+	    -ms-transform: none;
+	        transform: none;
+}
+
+@media only screen and (max-width: 1024px) {
+	.gallery-top .swiper-slide .swiperHeading {
+		min-width: 90%;
+		text-align: center;
+	    -webkit-transform: translateX(-50%);
+	    	-ms-transform: translateX(-50%);
+	            transform: translateX(-50%);
+	    left: 50%;
+	    opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.gallery-top .swiper-slide .swiperHeading {
+		bottom: 10px;
+	}
+
+	.gallery-top .swiper-slide .swiperHeading h2 {
+		font-size: 1.6rem;
+	}
+}
+
 .swiper-slide {
   background-position: center;
   background-size: cover;
