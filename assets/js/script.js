@@ -186,12 +186,12 @@ function validateForm() {
     	dateFormat: "dd/mm/yy", 	
     });
 
-    $( "#degreeuntil0").datepicker({
+    $( "#edlevdateto0").datepicker({
     	maxDate: "0",
     	dateFormat: "dd/mm/yy",
     	beforeShow: function (date) {
             var date2 = $('#edlevdatefrom0').datepicker('getDate');
-            $('#degreeuntil0').datepicker('option', 'minDate', date2);
+            $('#edlevdateto0').datepicker('option', 'minDate', date2);
         }
     });
 
@@ -242,21 +242,21 @@ function validateForm() {
     	dateFormat: "dd/mm/yy",	
     });
 
-    $( "#masterdateto1").datepicker({
+    $( "#masterdateuntil1").datepicker({
     	maxDate: "0",
     	dateFormat: "dd/mm/yy",
     	beforeShow: function (date) {
             var date2 = $('#masterdatefrom1').datepicker('getDate');
-            $('#masterdateto1').datepicker('option', 'minDate', date2);
+            $('#masterdateuntil1').datepicker('option', 'minDate', date2);
         }
     });
 
-    $( "#jobdatefrom" ).datepicker({
+    $( "#jobdatefrom0" ).datepicker({
     	maxDate: "0",
     	dateFormat: "dd/mm/yy",	
     });
 
-    $( "#jobdateto").datepicker({
+    $( "#jobdateto0").datepicker({
     	maxDate: "0",
     	dateFormat: "dd/mm/yy",
     	beforeShow: function (date) {
