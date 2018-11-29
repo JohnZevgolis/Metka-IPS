@@ -1,5 +1,10 @@
 /***      Shared      ***/
 
+.page-info .content,
+.jobs .content {
+	max-width: 970px;
+}
+
 .social.share-pdf {
 	display: -webkit-box;
 	display: -ms-flexbox;
