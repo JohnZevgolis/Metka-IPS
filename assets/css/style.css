@@ -1804,7 +1804,6 @@ body.certifications {
 	        flex-direction: column;
 	padding-top: 6rem;
 	padding-bottom: 4rem;
-	backface-visibility: hidden;
 	position: relative;
 }
 
@@ -1844,6 +1843,11 @@ body.certifications {
   left: auto;
 }
 
+.my-events-calendar .event-info a.plus-btn.slim.black {
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
 .my-events-calendar .event-info span {
 	color: #436882;
 	text-transform: uppercase;
@@ -1879,13 +1883,18 @@ body.certifications {
 	transition: all .6s;
 	-webkit-transition: all .6s;
 	-ms-transition: all .6s;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0);
+		    -ms-transform: translateZ(0);
+		        transform: translateZ(0);
 }
 
 @media only screen and (min-width: 1024px) {
 	.my-events-calendar > .container > .row:hover > div.col-md-7 {
-		-webkit-transform: scale(1.07);
-		    -ms-transform: scale(1.07);
-		        transform: scale(1.07);
+		-webkit-transform: scale(1.07) translateZ(0);
+		    -ms-transform: scale(1.07) translateZ(0);
+		        transform: scale(1.07) translateZ(0);
 	}
 
 	.my-events-calendar > .container > .row:hover .event-info:before, .my-events-calendar > .container > .row:hover .event-info:after {
