@@ -2,7 +2,7 @@ $(function() {
 
     var projectBg2 = new Swiper('.project-bg2', {
         loop: true,
-        simulateTouch:false,
+        simulateTouch: false,
         autoplay: {
             delay: 6000,
             disableOnInteraction: false
@@ -10,6 +10,7 @@ $(function() {
     });
     var projectSlider = new Swiper('.project-img', {
         loop: true,
+        simulateTouch: false,
         autoplay: {
             delay: 6000,
             disableOnInteraction: false
